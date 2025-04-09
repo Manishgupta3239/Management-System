@@ -1,37 +1,22 @@
-# Node.js
+# Common
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-dist/
-build/
-
-# Environment variables
-backend/.env
-backend/.env.local
-backend/.env.development
-backend/.env.production
-backend/.env.test
-
-# OS-specific files
+*.log
 .DS_Store
 Thumbs.db
 
-# Logs
-logs/
-*.log
+# Backend-specific
+backend/node_modules/
+backend/.env
+backend/dist/
+backend/logs/
 
-# IDE / Editor
-.vscode/
-.idea/
-
-# React / Frontend
+# Frontend-specific (React)
 frontend/node_modules/
 frontend/build/
 frontend/dist/
 frontend/.next/
 frontend/.turbo/
 
-# Backend
-backend/node_modules/
-backend/dist/
+# Editor / OS files
+.vscode/
+.idea/
