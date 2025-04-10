@@ -34,9 +34,10 @@ router.post("/login", async (req, res) => {
         });
         res.cookie("token", token, {
           httpOnly: true,
-          secure: true, // must be true for HTTPS
-          sameSite: "None", // required for cross-site cookie
-        });
+          secure: true,         
+          sameSite: "None",     
+          path: "/",            
+        });        
         
         return res.status(200).json({ token: token, data: user });
       } else {
