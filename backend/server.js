@@ -13,7 +13,7 @@ dotenv.config();
 const app = express();
 app.use(cookieParser());
 app.use(bodyParser.json());
-app.use(cors({ origin: "https://management-system-2d8df.web.app/", credentials: true }));
+app.use(cors({ origin: "https://management-system-2d8df.web.app", credentials: true }));
 app.use(express.json());
 app.use("/api/auth", AuthRoutes);
 app.use("/api/task", TaskRoutes);
