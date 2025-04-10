@@ -11,7 +11,7 @@ const UserProvider = ({children}) => {
  
     const getData = async (token) => {
       try {
-        const response = await axios.get("http://localhost:3000/api/admin/users",{
+        const response = await axios.get("https://management-system-wgrv.onrender.com/api/admin/users",{
           headers:{
             Authorization : `Bearer ${token}`
           }

@@ -40,7 +40,7 @@ const AdminDashboard = () => {
   async function handleSubmit(e) {
     e.preventDefault();
     try{
-      const response = await axios.post("http://localhost:3000/api/task/create",form);
+      const response = await axios.post("https://management-system-wgrv.onrender.com/api/task/create",form);
       if(response){
         toast.success(`Task assigned to ${response.data.username}`);
         console.log(response);

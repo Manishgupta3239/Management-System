@@ -7,7 +7,7 @@ const DescCard = ({value,state,complete,failed}) => {
 
     async function completeTask(id){
         try {
-            const res = await axios.post('http://localhost:3000/api/task/completeTask',{id : id});
+            const res = await axios.post('https://management-system-wgrv.onrender.com/api/task/completeTask',{id : id});
             if(res.status == 200){
                 complete(true);
                 toast.success("Task Completed");
@@ -19,7 +19,7 @@ const DescCard = ({value,state,complete,failed}) => {
 
     async function failedTask(id){
         try {
-            const res = await axios.post('http://localhost:3000/api/task/failedTask',{id : id});
+            const res = await axios.post('https://management-system-wgrv.onrender.com/api/task/failedTask',{id : id});
             if(res.status == 200){
                 toast.warning("Task Failed");
                 failed(true);

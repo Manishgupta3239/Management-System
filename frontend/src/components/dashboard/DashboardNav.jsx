@@ -9,7 +9,7 @@ const DashboardNav = ({name}) => {
   const{setAuthenticate} = useContext(AuthContext);
   async function logout(){
     try {
-      const response = await axios.get("http://localhost:3000/api/auth/logout", { withCredentials: true }); 
+      const response = await axios.get("https://management-system-wgrv.onrender.com/api/auth/logout", { withCredentials: true }); 
       if(response.status == 200){
         localStorage.clear();
         setAuthenticate(false);

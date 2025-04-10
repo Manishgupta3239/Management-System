@@ -9,7 +9,7 @@ const TaskProvider=({ children })=>{
 
   const getData = async (token) => {
     try {
-      const response = await axios.get("http://localhost:3000/api/task/alltask",{
+      const response = await axios.get("https://management-system-wgrv.onrender.com/api/task/alltask",{
         headers:{
           Authorization : `Bearer ${token}`
         }

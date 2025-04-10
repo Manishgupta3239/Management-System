@@ -18,7 +18,7 @@ const SignUp = () => {
         }if(form.password != form.confirmPassword){
          return toast.error('Passwords do not match');
         }                
-    const response = await axios.post("http://localhost:3000/api/auth/signup", form, { withCredentials: true });
+    const response = await axios.post("https://management-system-wgrv.onrender.com/api/auth/signup", form, { withCredentials: true });
     if(response.status == 200){
         toast.success('Signup successful! Please log in to continue');   
         setTimeout(() => {
