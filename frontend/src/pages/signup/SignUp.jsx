@@ -5,6 +5,7 @@ import {toast} from 'react-toastify';
 
 const SignUp = () => {
   const [form, setForm] = useState({ username: "", password: "" ,email:"",confirmPassword:""});
+  const [loading , setLoading] = useState(false);
   const navigate = useNavigate();
 
   function handleChange(e) {
@@ -12,6 +13,7 @@ const SignUp = () => {
   }
   async function handleSubmit(e) {
     e.preventDefault();
+    setLoading(true);
     try {
         if( !form.username || !form.password || !form.email || !form.confirmPassword){
           return  toast.error('Invalid Credentials!');
@@ -31,6 +33,7 @@ const SignUp = () => {
       }
       console.log(error);
     } finally {
+      setLoading(false)
       setForm({ username: "", password: "",confirmPassword:"",email:"" });
     }
   }
@@ -46,8 +49,9 @@ const SignUp = () => {
         <input placeholder='Enter Confirm Password' className='rounded-2xl h-12  bg-transparent border-2 border-green-900 px-2 text-[20px] font-medium text-white' name='confirmPassword' value={form.confirmPassword} onChange={handleChange} />
        
 
-        <button className='bg-green-900 rounded-xl h-12 w-[68%] font-medium text-white hover:bg-green-800 ' type='submit'>
-          SignUp
+        <button className='bg-green-900 rounded-xl h-12 w-[68%] font-medium text-white hover:bg-green-800 ' type='submit'
+        disabled={loading}>
+          {loading ? "Signing Up...": "SignUp"}
             </button>
             <p className='text-white text-[25px] font-semibold'>or</p>
         <p className='text-white'> Already have an account <NavLink to={'/'} className='text-blue-500 hover:underline font-semibold'>Login</NavLink></p>

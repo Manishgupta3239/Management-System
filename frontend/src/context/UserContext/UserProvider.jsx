@@ -1,5 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { AuthContext } from '../Authcontext/AuthContext.js';
+import React, { useState } from 'react'
 import axios from 'axios';
 import { UserContext } from './UserContext.js';
 
@@ -24,10 +23,7 @@ const UserProvider = ({children}) => {
         console.log("Data not submitted", error.messaage);
       }
     };
-  
-    // useEffect(()=>{
-    //   getData();
-    // },[token])
+ 
   
   return (
     <div>
