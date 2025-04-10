@@ -1,0 +1,58 @@
+# 🛠️ Task Management Web App (MERN Stack)
+
+A task management system built using the MERN stack, where an admin can assign tasks to employees and track their progress. Employees can log in to view, update, and manage their assigned tasks. Ideal for small teams or companies looking for a lightweight internal tool.
+
+---
+
+## ✨ Features
+
+### 🔐 Authentication
+- Secure login system for both admin and employees.
+- Protected routes based on user roles.
+
+### 🧑‍💼 Admin Panel
+- View all registered users.
+- Assign tasks to employees.
+- Monitor task status:
+  - ✅ Completed Tasks
+  - ❌ Failed Tasks
+  - 🆕 New Tasks
+- View total number of tasks and progress reports.
+
+### 👨‍💻 Employee Dashboard
+- View assigned tasks.
+- Mark tasks as **Completed** or **Failed**.
+- Real-time updates reflected in admin panel.
+
+---
+
+## 🖼️ Screenshots
+
+> Replace these with your actual images or GitHub image URLs.
+
+### 🔐 Login Page
+![Login Page](./Screenshot_21.png)
+
+### 🧑‍💼 Admin Dashboard
+![Admin Dashboard](./Screenshot_22.png)
+
+### 👨‍💻 Employee Dashboard
+![Employee Dashboard](./Screenshot_23.png)
+
+---
+
+## 🧰 Tech Stack
+
+- **Frontend:** React.js, Tailwind CSS *(if used)*
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB with Mongoose
+- **Authentication:** JWT
+- **Hosting:** Firebase (Frontend), Render (Backend/API)
+
+---
+
+## 🚀 Live Demo
+
+🔗 **Management System:** [https://management-system-2d8df.web.app/]
+
+---
