@@ -33,10 +33,11 @@ router.post("/login", async (req, res) => {
           expiresIn: "1h"
         });
         res.cookie("token", token, {
-          httpOnly: true, // Prevents JavaScript from accessing the cookie
-          secure: false, // Set to false if you're not using HTTPS in development
-          sameSite: "Lax",
+          httpOnly: true,
+          secure: true, // must be true for HTTPS
+          sameSite: "None", // required for cross-site cookie
         });
+        
         return res.status(200).json({ token: token, data: user });
       } else {
         console.log("incorrect password or username");
